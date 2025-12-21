@@ -1,0 +1,20 @@
+.container {
+  padding: 2rem 4rem;
+}
+
+.title {
+  color: palevioletred;
+  font-size: xx-large;
+  margin: 2rem 0 2rem 0;
+}
+
+.link {
+  padding: 1rem;
+  background-color: darkslateblue;
+  border-radius: 0.5rem;
+}
+
+.link:hover {
+  background-color: white;
+  color: darkslateblue;
+}
