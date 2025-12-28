@@ -17,6 +17,8 @@
   :root {
     --background: #0e070d;
     --foreground: #ffeff8;
+    --accent-primary: mediumslateblue;
+    --accent-secondary: darkslateblue;
   }
 }
 
