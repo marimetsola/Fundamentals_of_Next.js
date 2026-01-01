@@ -1,0 +1,17 @@
+.button {
+  padding: 1rem;
+  background-color: mediumslateblue;
+  color: blanchedalmond;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: blanchedalmond;
+  color: mediumslateblue;
+}
+
+.button:active {
+  background-color: mediumslateblue;
+  color: blanchedalmond;
+}

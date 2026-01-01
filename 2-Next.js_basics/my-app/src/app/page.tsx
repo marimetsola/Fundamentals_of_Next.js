@@ -1,5 +1,6 @@
 "use client";
 import Title from "./components/Title";
+import Button from "./components/Button";
 import styles from "./home/home.module.css";
 
 export default function Home() {
@@ -7,6 +8,8 @@ export default function Home() {
     <div className={`font-mono ${styles.container}`}>
       <Title>Mari's fabulous app 👸</Title>
       <p>I have no idea what this app is about. I'm sure it will be great!</p>
+      <br />
+      <Button>Un Bouton</Button>
     </div>
   );
 }
