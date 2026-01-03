@@ -15,6 +15,9 @@ export default function Navigation() {
       <Link className={styles.link} href="/profiles">
         Go to Profiles Page
       </Link>
+      <Link className={styles.link} href="/contact">
+        Contact
+      </Link>
     </div>
   );
 }
