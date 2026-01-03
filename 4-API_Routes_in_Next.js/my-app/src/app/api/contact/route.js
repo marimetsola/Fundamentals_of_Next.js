@@ -4,6 +4,10 @@ export async function POST(req) {
   const body = await req.json();
   const { name, message } = body;
 
+  if (req.headers.get("authorization") !== "Bearer token666") {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   if (!name || !message) {
     return NextResponse.json(
       { error: "Name and message are required" },
@@ -15,6 +19,6 @@ export async function POST(req) {
 
   return NextResponse.json(
     { success: true, message: "Message received" },
-    { status: 200 }
+    { status: 201 }
   );
 }
