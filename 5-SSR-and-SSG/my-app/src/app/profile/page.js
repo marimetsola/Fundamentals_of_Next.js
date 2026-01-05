@@ -1,6 +1,8 @@
 import Title from "../components/Title";
 
 export default async function ProfilePage() {
+  console.log("Rendering profile on server");
+
   const res = await fetch("https://jsonplaceholder.typicode.com/users/1", {
     cache: "no-store",
   });
