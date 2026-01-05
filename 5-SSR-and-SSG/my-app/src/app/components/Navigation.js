@@ -12,6 +12,9 @@ export default function Navigation() {
       <Link className={styles.link} href="/about">
         Go to About Page
       </Link>
+      <Link className={styles.link} href="/profile">
+        My Profile
+      </Link>
       <Link className={styles.link} href="/profiles">
         Go to Profiles Page
       </Link>
