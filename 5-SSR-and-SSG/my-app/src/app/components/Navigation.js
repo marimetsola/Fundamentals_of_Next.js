@@ -24,6 +24,9 @@ export default function Navigation() {
       <Link className={styles.link} href="/blog">
         Blog
       </Link>
+      <Link className={styles.link} href="/hybrid">
+        Hybrid
+      </Link>
     </div>
   );
 }
