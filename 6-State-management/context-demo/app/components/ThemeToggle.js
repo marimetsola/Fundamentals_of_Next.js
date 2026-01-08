@@ -16,13 +16,10 @@ export default function ThemeToggle() {
         ${isDark ? "bg-gray-700" : "bg-gray-200"}
       `}
     >
-      {/* Light icon */}
       <span className="absolute left-2 text-sm">🌙</span>
 
-      {/* Dark icon */}
       <span className="absolute right-2 text-sm">☀️</span>
 
-      {/* Toggle knob */}
       <span
         className={`
           absolute h-6 w-6 rounded-full shadow
