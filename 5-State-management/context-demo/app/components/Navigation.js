@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import ThemeToggle from "../components/ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "../contexts/ThemeContext";
 
 export default function Navigation() {
