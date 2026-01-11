@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  height: 6rem;
+  background-color: darkslateblue;
+}
+
+.link {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: mediumslateblue;
+  border: 2px solid transparent;
+}
+
+.link:hover {
+  background-color: blanchedalmond;
+  color: mediumslateblue;
+}
+
+.active {
+  font-weight: bold;
+  border-color: blanchedalmond;
+}
