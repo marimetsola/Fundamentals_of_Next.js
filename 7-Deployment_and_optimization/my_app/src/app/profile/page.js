@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Title from "../components/Title";
 
 export default async function ProfilePage() {
@@ -12,7 +13,14 @@ export default async function ProfilePage() {
   return (
     <div className="m-8">
       <Title>Profile</Title>
-      <p>Welcome, {user.name}!</p>
+      <p className="mb-4">Welcome, {user.name}!</p>
+      <Image
+        src="/images/ai_pc_barbell_shoes.png"
+        alt="Profile image"
+        width={768}
+        height={512}
+        priority
+      />
     </div>
   );
 }
