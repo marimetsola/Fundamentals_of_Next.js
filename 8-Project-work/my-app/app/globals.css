@@ -4,14 +4,19 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --accent: #4f46e5;       /* indigo-600 */
+  --accent: #4f46e5; /* indigo-600 */
   --accent-hover: #4338ca; /* indigo-700 */
   --accent-muted: #e0e7ff; /* indigo-100 */
+  --accent-muted2: #c7d2fe; /* indigo-200 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-muted: var(--accent-muted);
+  --color-accent-muted2: var(--accent-muted2);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -21,9 +26,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
 
-    --accent: #818cf8;       /* indigo-400 */
+    --accent: #818cf8; /* indigo-400 */
     --accent-hover: #a5b4fc; /* indigo-300 */
     --accent-muted: #1e1b4b; /* indigo-950 */
+    --accent-muted2: #3730a3; /* indigo-800 */
   }
 }
 
