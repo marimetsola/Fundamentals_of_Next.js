@@ -15,7 +15,7 @@ export default function Navigation() {
   );
 
   const navLinkBase =
-    "px-3 py-1 rounded-full transition-colors hover:bg-accent-muted2";
+    "px-3 py-1 rounded-full transition-colors hover:[text-shadow:0_0_10px_var(--accent-hover)]";
 
   // create a classname; add underline if we're on the href
   const getNavLinkStyles = (href: string) =>
