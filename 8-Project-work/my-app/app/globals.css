@@ -44,3 +44,16 @@ body {
   scrollbar-gutter: auto;
   overflow-y: auto;
 }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
