@@ -1,49 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { add, subtract, multiply, divide } from "@/lib/math";
-import Button from "@/app/components/Button";
+import Button from "@/app/components/OperationButton";
+
+type Operation = "+" | "-" | "×" | "÷";
 
 export default function Calculator() {
-  const [a, setA] = useState("");
-  const [b, setB] = useState("");
-  const [result, setResult] = useState<number | string | null>(null);
-  const [activeOp, setActiveOp] = useState<string | null>("+");
+  const [a, setA] = useState("0");
+  const [b, setB] = useState("0");
+  const [activeOp, setActiveOp] = useState<Operation | null>("+");
 
-  const buttonStyle = (op: string) =>
-    activeOp === op
-      ? "bg-accent-muted text-foreground hover:bg-accent-muted"
-      : "";
+  let result: number | string | null = 0;
 
-  // 🔹 Automaattinen laskenta
-  useEffect(() => {
-    if (!activeOp || a === "" || b === "") {
-      setResult(null);
-      return;
-    }
+  // Operations are mapped symbol to function
+  const operations: Record<
+    Operation,
+    (a: number, b: number) => number | string
+  > = {
+    "+": add,
+    "-": subtract,
+    "×": multiply,
+    "÷": divide,
+  };
 
-    const numA = Number(a);
-    const numB = Number(b);
-
-    if (activeOp === "+") setResult(add(numA, numB));
-    else if (activeOp === "-") setResult(subtract(numA, numB));
-    else if (activeOp === "×") setResult(multiply(numA, numB));
-    else if (activeOp === "÷") setResult(divide(numA, numB));
-  }, [a, b, activeOp]);
-
-  // 🔹 Display-logiikka
-  const display =
-    activeOp && (a === "" || b === "")
-      ? "Enter values"
-      : result === null
-        ? ""
-        : typeof result === "number"
-          ? `= ${result}`
-          : result;
+  if (a === "" || b === "") {
+    result = "Enter values";
+  } else if (activeOp) {
+    const fn = operations[activeOp];
+    result = fn(Number(a), Number(b));
+  }
 
   return (
     <div className="p-6 flex flex-col gap-4 max-w-sm mx-auto">
-      {/* Input 1 */}
+      <h1 className="text-2xl font-semibold text-center">Calculator</h1>
+
       <input
         type="number"
         value={a}
@@ -51,26 +42,24 @@ export default function Calculator() {
         className="border p-2 rounded-md bg-accent-muted"
       />
 
-      {/* Buttons */}
       <div className="flex justify-between gap-2">
-        <Button onClick={() => setActiveOp("+")} className={buttonStyle("+")}>
+        <Button onClick={() => setActiveOp("+")} active={activeOp === "+"}>
           +
         </Button>
 
-        <Button onClick={() => setActiveOp("-")} className={buttonStyle("-")}>
+        <Button onClick={() => setActiveOp("-")} active={activeOp === "-"}>
           -
         </Button>
 
-        <Button onClick={() => setActiveOp("×")} className={buttonStyle("×")}>
+        <Button onClick={() => setActiveOp("×")} active={activeOp === "×"}>
           ×
         </Button>
 
-        <Button onClick={() => setActiveOp("÷")} className={buttonStyle("÷")}>
+        <Button onClick={() => setActiveOp("÷")} active={activeOp === "÷"}>
           ÷
         </Button>
       </div>
 
-      {/* Input 2 */}
       <input
         type="number"
         value={b}
@@ -78,9 +67,9 @@ export default function Calculator() {
         className="border p-2 rounded-md bg-accent-muted"
       />
 
-      {/* Result */}
       <div className="text-lg font-semibold text-center mt-2">
-        {display}
+        {result !== null &&
+          (typeof result === "number" ? `= ${result}` : result)}
       </div>
     </div>
   );
