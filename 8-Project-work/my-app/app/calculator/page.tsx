@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { add, subtract, multiply, divide } from "@/lib/math";
-import Button from "@/app/components/OperationButton";
+import Button from "@/app/components/Button";
 
 type Operation = "+" | "-" | "×" | "÷";
 

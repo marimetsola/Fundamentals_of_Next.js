@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Magnificent web app | Mari Metsola",
+  title: "Magnificent Web App | Mari Metsola",
   description: "Project work for Metropolia's Fundamentals of Next.js course",
 };
 

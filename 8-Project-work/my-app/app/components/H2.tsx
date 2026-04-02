@@ -9,7 +9,7 @@ type H2Props = {
 
 export default function H2({ children, className }: H2Props) {
   return (
-    <h2 className={cn("text-[1.5rem] font-semibold mt-4 mb-4", className)}>
+    <h2 className={cn("text-[1.5rem] font-semibold mt-4 mb-0", className)}>
       {children}
     </h2>
   );

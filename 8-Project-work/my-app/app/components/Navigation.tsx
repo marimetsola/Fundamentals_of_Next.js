@@ -23,7 +23,7 @@ export default function Navigation() {
 
   return (
     <header className={headerStyles}>
-      <div className="text-lg font-semibold">MyApp</div>
+      <div className="text-lg font-semibold">Mari&apos;s Next.js App</div>
       <nav className="flex items-center gap-6">
         <Link href="/" className={getNavLinkStyles("/")}>
           Home
