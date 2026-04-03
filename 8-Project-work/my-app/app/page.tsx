@@ -56,12 +56,10 @@ export default function Home() {
 
         <p>
           The quiz allows the user to answer three multiple-choice questions and
-          submit their answers to see the final score. After submission, the
-          selected answers are marked as correct or incorrect, and the rest of
-          the quiz is locked until it is reset. The questions are stored in a
-          separate data file, and the selected answers are managed using state,
-          with the result calculated based on the correct answers defined in the
-          data.
+          submit them to see the final score. The questions are fetched from a
+          Next.js API route, and the submitted answers are checked through the
+          same API, which returns the score and whether the selected answers
+          were correct or incorrect.
         </p>
       </main>
     </div>
